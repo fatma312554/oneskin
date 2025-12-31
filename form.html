@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OneSkin – Diagnostic peau sensible</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>OneSkin – Formulaire de diagnostic</h1>
+    <form id="skinForm">
+      <!-- Questions classiques -->
+      <label>Type de peau
+        <select name="type" required>
+          <option value="">Choisir…</option>
+          <option>Sèche</option>
+          <option>Grasse</option>
+          <option>Mixte</option>
+          <option>Sensible</option>
+        </select>
+      </label>
+
+      <fieldset>
+        <legend>Symptômes fréquents</legend>
+        <label><input type="checkbox" name="symptomes" value="rougeurs"> Rougeurs</label>
+        <label><input type="checkbox" name="symptomes" value="tiraillements"> Tiraillements</label>
+        <label><input type="checkbox" name="symptomes" value="demangeaisons"> Démangeaisons</label>
+        <label><input type="checkbox" name="symptomes" value="boutons"> Boutons</label>
+        <label><input type="checkbox" name="symptomes" value="taches"> Taches</label>
+      </fieldset>
+
+      <label>Réactivité aux parfums/alcool
+        <select name="reactif" required>
+          <option value="">Choisir…</option>
+          <option>Oui</option>
+          <option>Non</option>
+        </select>
+      </label>
+
+      <label>Phase du cycle
+        <select name="cycle" required>
+          <option value="">Choisir…</option>
+          <option>Menstruation</option>
+          <option>Prémenstruel</option>
+          <option>Ovulation</option>
+          <option>Post-menstruel</option>
+        </select>
+      </label>
+
+      <label>Exposition au soleil
+        <select name="soleil" required>
+          <option value="">Choisir…</option>
+          <option>Faible</option>
+          <option>Moyenne</option>
+          <option>Forte</option>
+        </select>
+      </label>
+
+      <label>Pollution
+        <select name="pollution" required>
+          <option value="">Choisir…</option>
+          <option>Faible</option>
+          <option>Moyenne</option>
+          <option>Forte</option>
+        </select>
+      </label>
+
+      <label>Sommeil (heures/jour)
+        <input type="number" name="sommeil" min="0" max="24" step="0.5" required />
+      </label>
+
+      <label>Stress
+        <select name="stress" required>
+          <option value="">Choisir…</option>
+          <option>Faible</option>
+          <option>Moyen</option>
+          <option>Élevé</option>
+        </select>
+      </label>
+
+      <!-- Questions émotionnelles -->
+      <fieldset>
+        <legend>Comment votre peau réagit-elle quand vous êtes stressée ?</legend>
+        <label><input type="radio" name="stressReaction" value="rouge"> Rouge ou irritée</label>
+        <label><input type="radio" name="stressReaction" value="tiraillee"> Tire ou démange</label>
+        <label><input type="radio" name="stressReaction" value="stable"> Ne change pas vraiment</label>
+        <label><input type="radio" name="stressReaction" value="inconnue"> Je ne sais pas</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Quel est votre rapport émotionnel à votre peau ?</legend>
+        <label><input type="radio" name="emotionPeau" value="bien"> Je me sens bien</label>
+        <label><input type="radio" name="emotionPeau" value="instable"> Instable et imprévisible</label>
+        <label><input type="radio" name="emotionPeau" value="frustree"> Frustrée</label>
+        <label><input type="radio" name="emotionPeau" value="reflet"> Elle reflète mon état intérieur</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Quel parfum ou texture vous apaise le plus ?</legend>
+        <label><input type="radio" name="texture" value="neutre"> Sans parfum, neutre</label>
+        <label><input type="radio" name="texture" value="floral"> Floral léger</label>
+        <label><input type="radio" name="texture" value="gel"> Texture gel fraîche</label>
+        <label><input type="radio" name="texture" value="creme"> Texture crème enveloppante</label>
+      </fieldset>
+
+      <button type="submit">Obtenir ma routine</button>
+    </form>
+
+    <section id="result" class="result" hidden>
+      <h2>Routine recommandée</h2>
+      <div id="routine"></div>
+      <h3>Conseils doux</h3>
+      <ul id="tips"></ul>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

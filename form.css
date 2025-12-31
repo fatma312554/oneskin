@@ -1,0 +1,55 @@
+:root {
+  --bg: #ffffff;
+  --fg: #222222;
+  --primary: #e8dcc7;
+  --muted: #6b7280;
+  --card: #f5f0e6;
+}
+body {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  background: var(--bg);
+  color: var(--fg);
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+form, .result {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-top: 1rem;
+}
+label, fieldset {
+  display: block;
+  margin-bottom: 1rem;
+}
+select, input, button {
+  width: 100%;
+  padding: 0.6rem;
+  margin-top: 0.4rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+}
+button {
+  background: var(--primary);
+  color: var(--fg);
+  font-weight: 600;
+  cursor: pointer;
+}
+button:hover {
+  filter: brightness(0.95);
+}
+h1, h2, h3 {
+  margin-top: 0;
+  font-family: 'Georgia', serif;
+}
+.result h2 {
+  color: var(--fg);
+}
+.tip-muted {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
